@@ -22,14 +22,15 @@ html,body{margin:0;height:100%;overflow:hidden;background:#000;
 .hz{position:absolute;cursor:pointer;border-radius:6px;transition:background-color .2s}
 .hz:hover{background:rgba(0,0,0,.07)}
 .hz.ar:hover{background:rgba(255,255,255,.14)}
-.nav{position:fixed;top:50%;width:44px;height:44px;margin-top:-22px;border-radius:50%;border:0;padding:0;cursor:pointer;
-  background:rgba(20,20,20,.38);color:#fff;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;
-  transition:opacity .35s,background-color .2s;z-index:5;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
-.nav.show{opacity:1;pointer-events:auto}
-.nav:hover{background:rgba(20,20,20,.62)}
+.nav{position:fixed;top:50%;width:52px;height:52px;margin-top:-26px;border-radius:50%;border:0;padding:0;cursor:pointer;
+  background:rgba(20,20,20,.55);color:#fff;display:flex;align-items:center;justify-content:center;opacity:.9;pointer-events:auto;
+  box-shadow:0 0 0 1.5px rgba(255,255,255,.55) inset,0 2px 10px rgba(0,0,0,.35);
+  transition:opacity .35s,background-color .2s;z-index:5;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);touch-action:manipulation}
+.nav.show{opacity:1}
+.nav:hover,.nav:active{background:rgba(20,20,20,.8);opacity:1}
 .nav.off{opacity:0!important;pointer-events:none!important}
-#prev{left:12px}#next{right:12px}
-.nav svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+#prev{left:max(10px,env(safe-area-inset-left))}#next{right:max(10px,env(safe-area-inset-right))}
+.nav svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
 </style>
 </head>
 <body>
